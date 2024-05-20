@@ -2,7 +2,8 @@ import cv2
 from typing import List
 import numpy as np
 
-def read_video(video_path : str) -> List[np.ndarray]:
+
+def read_video(video_path: str) -> List[np.ndarray]:
     """Reads a video file and returns a list of frames
 
     Args:
@@ -21,6 +22,7 @@ def read_video(video_path : str) -> List[np.ndarray]:
     cap.release()
     return frames
 
+
 def write_video(frames: List[np.ndarray], output_path: str) -> None:
     """Writes frames to a video file
 
@@ -29,7 +31,8 @@ def write_video(frames: List[np.ndarray], output_path: str) -> None:
         output_path (str): Path to the output video file
     """
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    out = cv2.VideoWriter(output_path, fourcc, 24, (frames[0].shape[1], frames[0].shape[0]))
+    out = cv2.VideoWriter(output_path, fourcc, 24,
+                          (frames[0].shape[1], frames[0].shape[0]))
     for frame in frames:
         out.write(frame)
     out.release()
