@@ -20,26 +20,16 @@ __pycache__/
 # Virtual environment
 venv/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
 # VS Code
 .vscode/
 
-# Input videos
+# Folders
 input_videos/
-
-# Output videos
 output_videos/
-
-# Runs outputs
+models/
 runs/
-
-# Training data
+stubs/
 training/
 
-# Models
-models/
-
-# YOLO model file
-yolov8x.pt
+# Files
+yolo_infrence.py
